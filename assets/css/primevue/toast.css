@@ -1,0 +1,37 @@
+.p-toast {
+  .p-toast-message {
+    @apply overflow-hidden;
+
+    .p-toast-message-content .p-toast-message-icon {
+      @apply text-lg;
+    }
+  }
+}
+
+.p-toast-message-text {
+  @apply text-sm;
+}
+
+.p-toast-detail {
+  @apply text-xs;
+}
+
+.p-toast-message-error.p-toast-message {
+  background-color: #ffe7e6 !important;
+}
+
+.p-toast-message-error .p-toast-message-content {
+  border-color: #ff5757;
+}
+
+.p-toast-message-success .p-toast-message-content {
+  border-color: #1ea97c;
+}
+
+.p-toast-message-warn .p-toast-message-content {
+  border-color: #cc8925;
+}
+
+.p-toast-message-info .p-toast-message-content {
+  border-color: #696cff;
+}

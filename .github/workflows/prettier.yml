@@ -1,0 +1,32 @@
+name: Prettier
+
+# This action works with pull requests and pushes
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+
+      - name: Install
+        run: yarn install
+
+      - name: Run prettier
+        run: npx prettier --write .
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply Prettier changes

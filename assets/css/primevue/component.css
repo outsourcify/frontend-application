@@ -1,0 +1,4 @@
+.p-component-overlay {
+  @apply bg-white bg-opacity-70;
+  z-index: 2000;
+}

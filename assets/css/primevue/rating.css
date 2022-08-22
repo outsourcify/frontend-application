@@ -1,0 +1,9 @@
+.p-rating {
+  .p-rating-icon {
+    @apply text-gray-300;
+
+    /* &.pi-star-fill {
+      @apply text-yellow-400;
+    } */
+  }
+}
