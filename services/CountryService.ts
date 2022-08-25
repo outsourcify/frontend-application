@@ -18,6 +18,7 @@ export default class CountryService extends DefaultService {
         params,
       }
     );
+
     return result;
   }
 

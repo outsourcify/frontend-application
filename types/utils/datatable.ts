@@ -6,6 +6,7 @@ export type DataType =
   | 'boolean'
   | 'image'
   | 'tag'
+  | 'delete'
   | 'rating';
 
 export interface TableColumn {

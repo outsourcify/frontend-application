@@ -1,18 +1,18 @@
 import DefaultService from '~~/services/DefaultService';
-import type { Region } from '~~/types/entity/region';
+import type { Destination } from '~~/types/entity/destination';
 import type { CollectionResponse } from '~~/types/utils/response';
 
-export default class RegionService extends DefaultService {
+export default class DestinationsService extends DefaultService {
   readonly endpoint: string;
 
   constructor() {
     super();
 
-    this.endpoint = `/api/regions`;
+    this.endpoint = `/api/destinations`;
   }
 
   async collection(params?: object) {
-    const result: CollectionResponse<Region> = await this.apiFetch(
+    const result: CollectionResponse<Destination> = await this.apiFetch(
       `${this.endpoint}`,
       {
         params,
@@ -23,20 +23,20 @@ export default class RegionService extends DefaultService {
   }
 
   async item(id: string | string[]) {
-    const result: Region = await this.apiFetch(`${this.endpoint}/${id}`);
+    const result: Destination = await this.apiFetch(`${this.endpoint}/${id}`);
     return result;
   }
 
-  async post(body: Region) {
-    const result: Region = await this.apiFetch(`${this.endpoint}`, {
+  async post(body: Destination) {
+    const result: Destination = await this.apiFetch(`${this.endpoint}`, {
       method: 'POST',
       body: this.serialize(body),
     });
     return result;
   }
 
-  async put(body: Region) {
-    const result: Region = await this.apiFetch(`${this.endpoint}/${body.id}`, {
+  async put(body: Destination) {
+    const result: Destination = await this.apiFetch(`${this.endpoint}/${body.id}`, {
       method: 'PUT',
       body: this.serialize(body),
     });

@@ -132,8 +132,8 @@ definePageMeta({
 });
 
 const formState = reactive<Credential>({
-  email: '',
-  password: '',
+  email: 'admin@admin.com',
+  password: 'AdminPass',
 });
 
 const rules = {

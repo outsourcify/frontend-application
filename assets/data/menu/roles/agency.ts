@@ -36,6 +36,14 @@ const menu: Menu[] = [
         icon: PrimeIcons.MAP_MARKER,
         to: { name: 'geography-regions' },
       },
+      {
+        key: 'geography-destinations',
+        relatedKeys: ['geography-destinations'],
+        title: 'Destinatinos',
+        caption: 'The place where someone is going or where something is being sent or taken',
+        icon: PrimeIcons.BOOKMARK,
+        to: { name: 'geography-destinations' },
+      },
     ],
   },
 ];
