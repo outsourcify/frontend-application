@@ -3,10 +3,11 @@
     :header="props.header"
     v-model:visible="containerVisible"
     :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
-    :style="{ width: '450px' }"
+    :style="props.withMap ? 'width: 900px' : 'width: 450px'"
     :maximizable="props.maximizable"
     :modal="true"
   >
+
     <form @submit.prevent="submit" class="p-fluid">
       <!-- SLOT  -->
       <slot></slot>
@@ -38,6 +39,7 @@ const props = defineProps<{
   visible?: boolean;
   loading?: boolean;
   maximizable?: boolean;
+  withMap?: boolean;
 }>();
 
 const emit = defineEmits<{

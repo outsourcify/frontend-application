@@ -248,6 +248,25 @@
             </template>
           </PColumn>
 
+          <!-- TYPE DELETE -->
+          <PColumn
+            v-else-if="column.dataType === 'delete'"
+            :field="column.field"
+            :header="column.header"
+            :sortable="column.sortable"
+            :showFilterMenu="false"
+          >
+            <template #body="{ data, field }">
+              <i
+                class="pi"
+                :class="{
+                  'pi-trash text-lime-700': get(data, field),
+                  'pi-trash text-red-700': !get(data, field),
+                }"
+              ></i>
+            </template>
+          </PColumn>
+
           <!-- Add support for other types here -->
         </template>
 

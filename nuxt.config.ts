@@ -74,7 +74,7 @@ export default defineNuxtConfig({
   // https://v3.nuxtjs.org/guide/features/runtime-config/
   runtimeConfig: {
     public: {
-      apiBase: 'https://phpstack-823281-2829821.cloudwaysapps.com/R3m0V3-m3', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+      apiBase: 'https://phpstack-823281-2829821.cloudwaysapps.com', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
     },
   },
 });
